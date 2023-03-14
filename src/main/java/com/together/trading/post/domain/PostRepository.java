@@ -1,7 +1,7 @@
 package com.together.trading.post.domain;
 
-import com.together.trading.post.domain.entity.PostEntity;
+import com.together.trading.post.domain.entity.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PostRepository extends JpaRepository<PostEntity, Long> {
+public interface PostRepository extends JpaRepository<Post, Long> {
 }

@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "POST")
 @Entity
-public class PostEntity {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,7 +27,7 @@ public class PostEntity {
     private Long writerId;
 
     @Builder
-    public PostEntity(String title, String content, Long writerId) {
+    public Post(String title, String content, Long writerId) {
         this.title = title;
         this.content = content;
         this.writerId = writerId;

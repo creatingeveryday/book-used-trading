@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Table(name = "MEMBER")
 @Entity
-public class MemberEntity {
+public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +24,7 @@ public class MemberEntity {
     private String image;
 
     @Builder
-    public MemberEntity(String name, String image) {
+    public Member(String name, String image) {
         this.name = name;
         this.image = image;
     }
