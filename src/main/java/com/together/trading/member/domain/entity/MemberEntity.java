@@ -14,13 +14,19 @@ public class MemberEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(length = 100, nullable = false)
+    @Column(name = "NAME", length = 100, nullable = false)
     private String name;
 
+    @Column(name = "IMAGE")
+    private String image;
+
     @Builder
-    public MemberEntity(String name) {
+    public MemberEntity(String name, String image) {
         this.name = name;
+        this.image = image;
     }
+
 }

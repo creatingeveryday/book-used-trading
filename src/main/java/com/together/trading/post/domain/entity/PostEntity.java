@@ -11,16 +11,19 @@ import javax.persistence.*;
 @Table(name = "POST")
 @Entity
 public class PostEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(length = 300, nullable = false)
+    @Column(name = "TITLE", length = 300, nullable = false)
     private String title;
 
-    @Column(columnDefinition = "TEXT")
+    @Column(name = "CONTENT", columnDefinition = "TEXT")
     private String content;
 
+    @Column(name = "WRITER_ID")
     private Long writerId;
 
     @Builder
