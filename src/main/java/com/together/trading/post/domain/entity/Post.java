@@ -1,16 +1,19 @@
 package com.together.trading.post.domain.entity;
 
+import com.together.trading.common.CommonEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Table(name = "POST")
+@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Post {
+public class Post extends CommonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
