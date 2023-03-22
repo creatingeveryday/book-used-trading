@@ -54,7 +54,7 @@ public class PostControllerTest {
                 .writerId(WriterId)
                 .build();
 
-        String url = "http://localhost:" + port + "/api/post/save";
+        String url = "http://localhost:" + port + "/post/save";
 
         //when
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, postDto, Long.class);
@@ -95,7 +95,7 @@ public class PostControllerTest {
                 .content(updatedContent)
                 .build();
 
-        String url = "http://localhost:" + port + "/api/post/" + updateId;
+        String url = "http://localhost:" + port + "/post/" + updateId;
 
         //when
         ResponseEntity<Long> responseEntity = restTemplate.exchange(
